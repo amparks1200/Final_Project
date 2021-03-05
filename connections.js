@@ -1,13 +1,15 @@
-const { Pool } =
-require("pg");
-const credentials = new 
-Pool({
-    user: "bvdyskfvnwitpw",
-    password: "",
-    host: "ec2-54-89-49-242.compute-1.amazonaws.com",
-    port: 5432,
-    database: "da3k6o5k4pli1m",
-    ssl: {rejectUnauthorized: false}
+const { Pool } = require('pg');
+try {
+ // When not running via Heroku, this will load the .env file.
+ require('dotenv').config();
+} catch (e) {
+ // When running with Heroku, dotenv doesn't need to be available.
+}
+const connectionString = process.env.DATABASE_URL;
+const pool = new Pool({
+ connectionString: connectionString,
+ ssl: connectionString.includes('localhost') ? false : {
+rejectUnauthorized: false }
 });
 
-module.exports = credentials;
+module.exports = pool;

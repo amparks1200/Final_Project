@@ -1,13 +1,24 @@
 <!-- Promo Banner -->
-
+<img class='banner' src=''>
 <!-- Search -->
 <input type="text" id="searchbox" name="placeholder">
 <button type="button">Search</button>
 <a href="">Advanced Search</a>
 <!-- Category Section -->
-<h3>Category 1</h3>
+<section class='catSection'>
+<a *ngFor="let category of service.categories" href='' class = 'homepageCat'>
+    <h3>{{ category }}</h3>
+</a>
+<a href='' class = 'homepageCat'>
+    <h3>Browse All Categories</h3>
+</a>
+</section>
+
+
+
+
+
+<!-- <h3>Category 1</h3>
 <h3>Category 2</h3>
 <h3>Category 3</h3>
-<h3>Browse All</h3>
-
-
+<h3>Browse All</h3> -->
