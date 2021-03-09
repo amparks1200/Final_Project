@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsaServiceService } from '../usa-service.service';
+import { Router } from '@angular/router';
 
 interface Categories{
   category: string;
@@ -21,9 +22,10 @@ export class HomePageComponent implements OnInit {
 
   getFilteredItems(): void {
     this.service.filterItems(this.itemSearch);
+    this.router.navigate(["/Results"]);
   }
 
-  constructor(public service: UsaServiceService) { }
+  constructor(public service: UsaServiceService, public router: Router) { }
 
   ngOnInit(): void {
     this.service.getItems();
