@@ -7,7 +7,10 @@ import { Subscriber } from 'rxjs';
 })
 export class UsaServiceService {
 
+  public url: string = "http://localhost:3000/";
+
   categories: any[] = [];
+  items: any[] = []
 
   constructor(private http: HttpClient) { }
 
@@ -27,6 +30,12 @@ export class UsaServiceService {
     )
   }
 
+  filterItems(itemSearch){
+      this.http.get(this.url + itemSearch).subscribe( 
+        (response: any) => {
+          console.log(response);
+        this.items = response;
+      });
+    }
+  }
 
-
-}

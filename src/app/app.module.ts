@@ -8,18 +8,24 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { ResultsComponent } from './results/results.component';
+import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomePageComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    ResultsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
