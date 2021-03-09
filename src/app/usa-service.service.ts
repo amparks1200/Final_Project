@@ -10,7 +10,8 @@ export class UsaServiceService {
   public url: string = "http://localhost:3000/";
 
   categories: any[] = [];
-  items: any[] = []
+  items: any[] = [];
+  results: any[] = [];
 
   constructor(private http: HttpClient) { }
 
