@@ -8,13 +8,15 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomePageComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
