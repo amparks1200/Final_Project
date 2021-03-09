@@ -10,6 +10,9 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
 import {HttpClientModule} from '@angular/common/http';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ResultsComponent } from './results/results.component';
+import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { CategoriesComponent } from './categories/categories.component';
     HomePageComponent,
     AdvancedSearchComponent,
     AboutUsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ResultsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

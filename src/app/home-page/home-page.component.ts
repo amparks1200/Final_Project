@@ -17,6 +17,12 @@ export class HomePageComponent implements OnInit {
     });
   }
 
+  public itemSearch: string = "";
+
+  getFilteredItems(): void {
+    this.service.filterItems(this.itemSearch);
+  }
+
   constructor(public service: UsaServiceService) { }
 
   ngOnInit(): void {

@@ -10,4 +10,13 @@ routes.get("/", function(req, res) {
 
 });
 
+routes.get("/:search", function(req, res) {
+  const search = req.params.search;
+  pool.query("SELECT * FROM usaproducts WHERE product_name ILIKE $1;", ["%"+ search + "%"]). then( (results) => {
+  res.status(200);
+  res.json(results.rows);
+});
+
+});
+
 module.exports = routes

@@ -1,9 +1,9 @@
 <!-- Promo Banner -->
 <img class='banner' src=''>
 <!-- Search -->
-<input type="text" id="searchbox" name="placeholder">
-<button type="button">Search</button>
+<input type="text" id="searchbox" placeholder="search items" [(ngModel)]="itemSearch">
 <a href="">Advanced Search</a>
+<button type="button" (click)="getFilteredItems()">Search</button>
 <!-- Category Section -->
 <section class='catSection'>
 <a *ngFor="let category of service.categories" href='' class = 'homepageCat'>
