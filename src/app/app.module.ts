@@ -9,6 +9,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
 
 import {HttpClientModule} from '@angular/common/http';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     NavBarComponent,
     HomePageComponent,
     AdvancedSearchComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
