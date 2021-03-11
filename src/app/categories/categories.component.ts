@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsaServiceService } from '../usa-service.service';
+import { Router } from '@angular/router';
 
 interface Categories{
   category: string;
@@ -18,7 +19,12 @@ export class CategoriesComponent implements OnInit {
     });
   }
 
-  constructor(public service: UsaServiceService) { }
+  getCatResults(category): void {
+    this.service.selectCategory(category);
+    this.router.navigate(["/Results"]);
+  }
+
+  constructor(public service: UsaServiceService, public router: Router) { }
 
   ngOnInit(): void {
     this.service.getItems();

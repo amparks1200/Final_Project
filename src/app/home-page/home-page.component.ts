@@ -25,6 +25,13 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(["/Results"]);
   }
 
+  // public catSelected: string = "";
+
+  getCatResults(category): void {
+    this.service.selectCategory(category);
+    this.router.navigate(["/Results"]);
+  }
+
   constructor(public service: UsaServiceService, public router: Router) { }
 
   ngOnInit(): void {

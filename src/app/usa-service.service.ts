@@ -45,5 +45,13 @@ export class UsaServiceService {
         // console.log(this.items);
       });
     }
+
+    selectCategory(catSelected){
+      this.http.get(this.url + "category/" + catSelected).subscribe( 
+        (response: any) => {
+          console.log(response);
+        this.items = response;
+      });
+    }
   }
 

@@ -19,4 +19,13 @@ routes.get("/:search", function(req, res) {
 
 });
 
+routes.get("/category/:category", function(req, res){
+  const category = req.params.category;
+  pool.query("SELECT * FROM usaproducts WHERE category ILIKE $1;", ["%"+ category + "%"]). then( (results) => {
+    res.status(200);
+    res.json(results.rows);
+})
+
+});
+
 module.exports = routes

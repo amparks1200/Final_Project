@@ -6,10 +6,10 @@
 <button type="button" (click)="getFilteredItems()">Search</button>
 <!-- Category Section -->
 <section class='catSection'>
-<a *ngFor="let category of service.categories" href='' class = 'homepageCat'>
+<a *ngFor="let category of service.categories" [routerLink]="" class = 'homepageCat' (click)="getCatResults(category)" >
     <h3>{{ category }}</h3>
 </a>
-<a href='' class = 'homepageCat'>
+<a routerLink="/Categories" class = 'homepageCat'>
     <h3>Browse All Categories</h3>
 </a>
 </section>
