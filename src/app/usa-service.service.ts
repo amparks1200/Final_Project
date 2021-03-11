@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Subscriber } from 'rxjs';
 
+interface Results {
+  product_name: string;
+  product_price: number;
+  product_image: any;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -36,6 +42,7 @@ export class UsaServiceService {
         (response: any) => {
           console.log(response);
         this.items = response;
+        // console.log(this.items);
       });
     }
   }

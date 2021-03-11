@@ -1,6 +1,8 @@
 <section>
     <h2>Search Results</h2>
-    <a *ngFor="let result of service.results" href=''>
-        <h3>{{ product_name }}</h3>
-    </a>
+    <div *ngFor="let item of service.items" class='imageResult'>
+        <img src='{{ item.images }}' class='itemImage'>
+        <h3>{{ item.product_name }}</h3>
+        <h3>Price: ${{ item.price }}</h3>
+    </div>
 </section>
