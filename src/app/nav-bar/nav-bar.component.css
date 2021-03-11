@@ -1,0 +1,7 @@
+#links {
+    display: none;
+}
+
+#links.open {
+    display:block;
+}

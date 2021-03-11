@@ -1,13 +1,13 @@
 <nav>
     <h1>Star Spangled Products</h1>
     <section>
-            <button onclick="showNav()" type="button">&#9776;</button>
+            <button id="nav" (click)="showNav()" type="button">&#9776;</button>
             <div>
-                <nav>
+                <section id="links" [ngClass]="{open: menuOpen}">
                     <a routerLink="/Home">Home</a>
                     <a routerLink="/Categories">Categories</a>
                     <a routerLink="/About-Us">About Us</a>
-                </nav>
+                </section>
             </div>
     </section>
 </nav>
