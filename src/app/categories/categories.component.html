@@ -1,4 +1,5 @@
 <!-- Category Section -->
+<a routerLink="/Home">Return Home</a>
 <section class='catSection'>
 <a *ngFor="let category of service.categories" [routerLink]="" class = 'homepageCat' (click)="getCatResults(category)">
     <h3>{{ category }}</h3>
