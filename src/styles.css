@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, red, white, blue);
+    margin: 0px;
+}
+.catHeader {
+    text-decoration: none;
+    color: black;
+    font-family: 'Redressed', cursive;
+    font-size: 35px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.catBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    max-height: 150px;
+    border: 1px solid black;
+    background-color: lightskyblue;
+    margin: 5px;
+}
+
+.homepageCat {
+    text-decoration: none;
+}
+
+.catSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

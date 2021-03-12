@@ -5,3 +5,18 @@
 #links.open {
     display:block;
 }
+
+h1 {
+    font-family: 'Redressed', cursive;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    
+}

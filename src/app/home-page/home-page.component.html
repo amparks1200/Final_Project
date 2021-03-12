@@ -2,15 +2,20 @@
 <img class='banner' src=''>
 <!-- Search -->
 <input type="text" id="searchbox" placeholder="search items" [(ngModel)]="itemSearch">
-<a href="">Advanced Search</a>
-<button type="button" (click)="getFilteredItems()">Search</button>
+<a class="advancedSearch" href="">Advanced Search</a>
+<button class="searchButton" type="button" (click)="getFilteredItems()">Search</button>
 <!-- Category Section -->
 <section class='catSection'>
 <a *ngFor="let category of service.categories" [routerLink]="" class = 'homepageCat' (click)="getCatResults(category)" >
-    <h3>{{ category }}</h3>
+    <div class="catBox">
+        <h3 class="catHeader">{{ category }}</h3>
+    </div>
 </a>
 <a routerLink="/Categories" class = 'homepageCat'>
-    <h3>Browse All Categories</h3>
+    <div class="catBox">
+        <h3 class="catHeader">Browse All Categories</h3>
+    </div>
+    
 </a>
 </section>
 

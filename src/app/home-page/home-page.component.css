@@ -1,0 +1,23 @@
+#searchbox {
+    margin-left: 5px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 2px;
+    margin: 0 auto;
+    display: block;
+}
+
+.advancedSearch {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.searchButton {
+    background-color: white;
+    border-radius: 5px;
+    border: solid 2px;
+    display: block;
+    margin: 0 auto;
+}
