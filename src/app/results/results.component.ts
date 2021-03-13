@@ -22,6 +22,10 @@ export class ResultsComponent implements OnInit {
       product_image: result.product_image
     });
   }
+
+  addResultToCart(result: Results): void {
+    this.service.categories.push(result);
+  }
   constructor (public service: UsaServiceService) { }
 
   ngOnInit(): void {

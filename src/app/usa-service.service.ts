@@ -12,12 +12,13 @@ interface Results {
   providedIn: 'root'
 })
 export class UsaServiceService {
-
+  showCart: boolean = true;
   public url: string = "http://localhost:3000/";
 
   categories: any[] = [];
   items: any[] = [];
   results: any[] = [];
+  public cart: Results[] = [];
 
   constructor(private http: HttpClient) { }
 
