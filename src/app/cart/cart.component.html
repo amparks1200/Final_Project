@@ -1,1 +1,10 @@
-<p>cart works!</p>
+<h2>Cart</h2>
+<a routerLink="/Home">Keep Shopping</a>
+<section class="cartItems">
+    <div *ngFor="let item of service.items" class='itemResult'>
+        <img src='{{ item.images }}' class='itemImage'>
+        <h3>{{ item.product_name }}</h3>
+        <h3>Price: ${{ item.price }}</h3>
+        <h3>Quantity: {{ item.quantity }}</h3>
+    </div>
+</section>

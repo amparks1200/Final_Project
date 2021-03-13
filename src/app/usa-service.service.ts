@@ -54,5 +54,13 @@ export class UsaServiceService {
         this.items = response;
       });
     }
+
+    cartPage(cartItems){
+      this.http.get(this.url + "cart/" + cartItems).subscribe( 
+        (response: any) => {
+          console.log(response);
+        this.items = response;
+      });
+    }
   }
 
