@@ -7,7 +7,7 @@ import { ResultsComponent } from './results/results.component'
 import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
-  { path: 'Cart', component: CartComponent}
+  { path: 'Cart', component: CartComponent},
   { path: 'Home', component: HomePageComponent },
   { path: 'Categories', component: CategoriesComponent },
   { path: 'About-Us', component: AboutUsComponent},
