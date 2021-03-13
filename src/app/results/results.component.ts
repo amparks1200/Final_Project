@@ -6,6 +6,9 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
+} 
+interface Cart extends Results {
+  quantity: number;
 }
 
 @Component({
@@ -23,8 +26,8 @@ export class ResultsComponent implements OnInit {
     });
   }
 
-  addResultToCart(result: Results): void {
-    this.service.categories.push(result);
+  addResultToCart(cartItem: Cart): void {
+    this.service.cart.push(cartItem);
   }
   constructor (public service: UsaServiceService) { }
 

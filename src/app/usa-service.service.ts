@@ -6,6 +6,9 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
+} 
+interface Cart extends Results {
+  quantity: number;
 }
 
 @Injectable({
@@ -18,7 +21,7 @@ export class UsaServiceService {
   categories: any[] = [];
   items: any[] = [];
   results: any[] = [];
-  public cart: Results[] = [];
+  public cart: Cart[] = [];
 
   constructor(private http: HttpClient) { }
 
