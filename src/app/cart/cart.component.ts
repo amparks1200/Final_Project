@@ -16,15 +16,12 @@ interface Results {
 })
 export class CartComponent implements OnInit {
 
-  addCart = function (cart: Results): void {
-    this.service.cart.push({
-      cart: cart
-    });
-  }
-
   getCartResults(cart): void {
     this.service.cartPage(cart);
     this.router.navigate(["/Cart"]);
+  }
+  removeFromCart(index) {
+    this.service.cart.splice(index, 1);
   }
   constructor(public service: UsaServiceService, public router: Router) { }
 

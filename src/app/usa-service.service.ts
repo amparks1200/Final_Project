@@ -7,9 +7,7 @@ interface Results {
   product_price: number;
   product_image: any;
 } 
-interface Cart extends Results {
-  quantity: number;
-}
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +19,7 @@ export class UsaServiceService {
   categories: any[] = [];
   items: any[] = [];
   results: any[] = [];
-  public cart: Cart[] = [];
+  public cart: Results[] = [];
 
   constructor(private http: HttpClient) { }
 

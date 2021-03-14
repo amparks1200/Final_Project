@@ -5,8 +5,8 @@
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
         <h3>Price: ${{ item.price }}</h3>
-        <select name="quantity" ng-init="item.quantity='1'" [(ngModel)]="item.quantity">
-            <option value="undefined">1</option>
+        <select name="quantity" [(ngModel)]="item.quantity">
+            <option selected="selected" value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -16,3 +16,5 @@
 
     </div>
 </section>
+
+<!-- ng-init="item.quantity='1'" -->
