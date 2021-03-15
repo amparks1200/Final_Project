@@ -17,7 +17,8 @@ interface Cart extends Results {
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  
+  quantity: number;
+
   addResult = function (result: Results): void {
     this.service.results.push({
       product_name: result.product_name,
@@ -32,6 +33,7 @@ export class ResultsComponent implements OnInit {
   constructor (public service: UsaServiceService) { }
 
   ngOnInit(): void {
+    this.quantity = 1;
   }
 
 }

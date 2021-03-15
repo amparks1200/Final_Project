@@ -6,15 +6,13 @@
         <h3>{{ item.product_name }}</h3>
         <h3>Price: ${{ item.price }}</h3>
         <select name="quantity" [(ngModel)]="item.quantity">
-            <option selected="selected" value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <option [value]="1">1</option>
+            <option [value]="2">2</option>
+            <option [value]="3">3</option>
+            <option [value]="4">4</option>
+            <option [value]="5">5</option>
         </select>
         <button class="addToCart" (click)="addResultToCart(item)">Add to Cart!</button>
 
     </div>
 </section>
-
-<!-- ng-init="item.quantity='1'" -->
