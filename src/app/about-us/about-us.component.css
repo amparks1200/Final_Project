@@ -1,0 +1,20 @@
+h1 {
+    text-align:center;
+    color:black;
+    margin:auto;
+}
+p {
+    text-align: center;
+    width: 600px;
+    color:black;
+    font-size: 24px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    color:black;
+    font-size: 20px;
+    text-align:center;
+    margin: auto;
+}
