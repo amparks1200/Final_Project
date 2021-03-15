@@ -30,10 +30,13 @@ export class ResultsComponent implements OnInit {
   addResultToCart(cartItem: Cart): void {
     this.service.cart.push(cartItem);
   }
+
+  addToFavorites (favoriteItem: Results): void {
+    this.service.favorite.push(favoriteItem);
+  }
   constructor (public service: UsaServiceService) { }
 
   ngOnInit(): void {
     this.quantity = 1;
   }
-
 }

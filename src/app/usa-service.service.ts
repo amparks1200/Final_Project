@@ -20,6 +20,7 @@ export class UsaServiceService {
   items: any[] = [];
   results: any[] = [];
   public cart: Results[] = [];
+  favorite: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -62,6 +63,14 @@ export class UsaServiceService {
           console.log(response);
         this.items = response;
       });
+    }
+
+    favoritesPage(favoriteItem){
+      this.http.get(this.url + "favorites/" + favoriteItem).subscribe(
+        (response:any) => {
+          console.log(response);
+          this.items = response;
+        });
     }
   }
 
