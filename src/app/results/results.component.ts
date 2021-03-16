@@ -37,6 +37,5 @@ export class ResultsComponent implements OnInit {
   constructor (public service: UsaServiceService) { }
 
   ngOnInit(): void {
-    this.quantity = 1;
   }
 }
