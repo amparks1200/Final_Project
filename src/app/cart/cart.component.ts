@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 })
 export class CartComponent implements OnInit {
 
-  getCartResults(cart): void {
-    this.service.cartPage(cart);
-    this.router.navigate(["/Cart"]);
-  }
   removeFromCart(index) {
     this.service.cart.splice(index, 1);
   }

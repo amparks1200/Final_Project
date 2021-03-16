@@ -28,7 +28,6 @@ export class ResultsComponent implements OnInit {
   }
 
   addResultToCart(cartItem: Cart): void {
-    cartItem.quantity = this.quantity;
     this.service.cart.push(cartItem);
   }
 

@@ -5,7 +5,7 @@
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
         <h3>Price: ${{ item.price }}</h3>
-        <select name="quantity" [(ngModel)]="quantity">
+        <select name="quantity" [(ngModel)]="item.quantity">
             <option [value]="1">1</option>
             <option [value]="2">2</option>
             <option [value]="3">3</option>

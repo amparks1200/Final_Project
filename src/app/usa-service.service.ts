@@ -44,8 +44,11 @@ export class UsaServiceService {
       this.http.get(this.url + itemSearch).subscribe( 
         (response: any) => {
           console.log(response);
-        this.items = response;
-        // console.log(this.items);
+        this.items = response.map( (item) => {
+          item.quantity = 1;
+          return item;
+        })
+        console.log(this.items);
       });
     }
 
@@ -53,15 +56,10 @@ export class UsaServiceService {
       this.http.get(this.url + "category/" + catSelected).subscribe( 
         (response: any) => {
           console.log(response);
-        this.items = response;
-      });
-    }
-
-    cartPage(cartItems){
-      this.http.get(this.url + "cart/" + cartItems).subscribe( 
-        (response: any) => {
-          console.log(response);
-        this.items = response;
+        this.items = response.map( (item) => {
+          item.quantity = 1;
+          return item;
+        })
       });
     }
 
