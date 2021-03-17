@@ -2,6 +2,8 @@ h1 {
     text-align:center;
     color:black;
     margin:auto;
+    padding:10px;
+    font-size: 48px;
 }
 p {
     text-align: center;
@@ -9,6 +11,7 @@ p {
     color:black;
     font-size: 24px;
     margin: auto;
+    padding:10px;
 }
 
 ul {
@@ -17,4 +20,13 @@ ul {
     font-size: 20px;
     text-align:center;
     margin: auto;
+    padding:10px;
+}
+
+img {
+    height:600px;
+    width:700px;
+    display:flex;
+    margin:auto;
+    padding:10px;
 }

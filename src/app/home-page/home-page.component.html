@@ -1,9 +1,18 @@
 <!-- Promo Banner -->
 <img class='banner' src=''>
+<!-- Promo Banner -->
+<h2>Welcome to Star Spangled Products!</h2>
+<h3>Browse for American Made Products</h3>
 <!-- Search -->
 <input type="text" id="searchbox" placeholder="search items" [(ngModel)]="itemSearch">
 <a class="advancedSearch" href="">Advanced Search</a>
 <button class="searchButton" type="button" (click)="getFilteredItems()">Search</button>
+<!-- Images -->
+<div class="homePage">
+<img src="./assets/sparklerFamily.jpg" alt="Dad and Daughter with Sparkler">
+<img src="./assets/smallbusinessopen.jpg" alt="Business Sign">
+<img src="./assets/usachild.jpg" alt="Happy Child">
+</div>
 <!-- Category Section -->
 <section class='catSection'>
 <a *ngFor="let category of service.categories" [routerLink]="" class = 'homepageCat' (click)="getCatResults(category)" >
