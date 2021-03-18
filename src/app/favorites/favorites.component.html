@@ -1,0 +1,10 @@
+<h2>My Favorites</h2>
+<a routerLink="/Home">Keep Shopping</a>
+<section class="favoriteItems">
+    <div *ngFor="let item of service.favorite; let myIndex = index" class='itemResult'>
+        <img src='{{ item.images }}' class='itemImage'>
+        <h3>{{ item.product_name }}</h3>
+        <h3>Price: ${{ item.price }}</h3>
+        <button class="delete" (click)="removeFavorite(myIndex)">Remove Favorite</button>
+    </div>
+</section>

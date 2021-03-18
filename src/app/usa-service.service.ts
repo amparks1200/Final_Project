@@ -5,13 +5,15 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
+  quantity?: number; 
+  price?: number;
 } 
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsaServiceService {
+
   showCart: boolean = true;
   public url: string = "http://localhost:3000/";
   description: any[] =[];
@@ -20,6 +22,8 @@ export class UsaServiceService {
   items: any[] = [];
   results: any[] = [];
   public cart: Results[] = [];
+  favorite: any[] = [];
+  size: string = "";
 
   constructor(private http: HttpClient) { }
 
@@ -39,12 +43,24 @@ export class UsaServiceService {
     )
   }
 
-  filterItems(itemSearch){
-      this.http.get(this.url + itemSearch).subscribe( 
+  filterItems(itemSearch, size?, state?){
+      this.items = [];
+      let url = this.url + itemSearch;
+      if (size && state){
+        url += `?size=${size}&state=${state}`;
+      } else if (state){
+        url += `?state=${state}`;
+      } else if (size){
+        url += `?size=${size}`;
+      }
+      this.http.get(url).subscribe( 
         (response: any) => {
           console.log(response);
-        this.items = response;
-        // console.log(this.items);
+        this.items = response.map( (item) => {
+          item.quantity = 1;
+          return item;
+        })
+        console.log(this.items);
       });
     }
 
@@ -52,16 +68,38 @@ export class UsaServiceService {
       this.http.get(this.url + "category/" + catSelected).subscribe( 
         (response: any) => {
           console.log(response);
-        this.items = response;
+        this.items = response.map( (item) => {
+          item.quantity = 1;
+          return item;
+        })
       });
     }
 
-    cartPage(cartItems){
-      this.http.get(this.url + "cart/" + cartItems).subscribe( 
-        (response: any) => {
+    favoritesPage(favoriteItem){
+      this.http.get(this.url + "favorites/" + favoriteItem).subscribe(
+        (response:any) => {
           console.log(response);
-        this.items = response;
-      }); }
+          this.items = response;
+        });
+    }
+
+    getSubTotal(){
+      let total = 0;
+      for (let item of this.cart) {
+        total += (item.price * item.quantity);
+      }
+      return total;
+    }
+
+    getTaxes() {
+      let taxes = (this.getSubTotal() * .06).toFixed(2);
+      return taxes;
+    }
+
+    getGrandTotal() {
+      let grandTotal = (this.getSubTotal() *1.06).toFixed(2);
+      return grandTotal;
+       }
 
       moreDetails (itemDetails){
         this.http.get(this.url + "description/" + itemDetails).subscribe(
@@ -74,4 +112,6 @@ export class UsaServiceService {
   
     
         
+
+
 

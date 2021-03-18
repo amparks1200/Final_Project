@@ -13,6 +13,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ResultsComponent } from './results/results.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
@@ -25,6 +27,8 @@ import { DescriptionComponent } from './description/description.component';
     CategoriesComponent,
     ResultsComponent,
     CartComponent,
+    FavoritesComponent,
+    CheckoutComponent,
     DescriptionComponent
   ],
   imports: [

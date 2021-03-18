@@ -5,6 +5,8 @@ import { CategoriesComponent } from './categories/categories.component'
 import { AboutUsComponent } from './about-us/about-us.component'
 import { ResultsComponent } from './results/results.component'
 import { CartComponent } from './cart/cart.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { DescriptionComponent } from './description/description.component';
 
 const routes: Routes = [
@@ -12,9 +14,12 @@ const routes: Routes = [
   { path: 'Home', component: HomePageComponent },
   { path: 'Categories', component: CategoriesComponent },
   { path: 'About-Us', component: AboutUsComponent},
+  { path: 'Favorites', component: FavoritesComponent},
   { path: 'Results', component: ResultsComponent},
-  { path: '', component: HomePageComponent },
-  { path: 'description', component: DescriptionComponent }
+  { path: 'AdvancedSearch', component: AdvancedSearchComponent},
+  { path: 'description', component: DescriptionComponent },
+  { path: '', component: HomePageComponent }
+  
 ];
 
 @NgModule({

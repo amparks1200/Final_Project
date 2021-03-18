@@ -1,18 +1,14 @@
-.itemImage {
-    width: 300px;
-    height: 300px;
-}
-
 .allResults {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 10px;
 }
-
 .itemResult {
-    text-align: center;
-    border: 1px solid black;
-    margin: 5px;
-    padding: 5px;
+    position: relative;
+}
+.favoriteBtn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }

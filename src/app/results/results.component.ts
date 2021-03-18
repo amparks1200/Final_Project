@@ -6,10 +6,10 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
-  business_name: any;
-  business_description: any;
-  state: string;
-  city: string;
+  business_name?: any;
+  business_description?: any;
+  state?: string;
+  city?: string;
 
 } 
 interface Cart extends Results {
@@ -22,7 +22,8 @@ interface Cart extends Results {
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  
+  quantity: number;
+
   addResult = function (result: Results): void {
     this.service.results.push({
       product_name: result.product_name,
@@ -39,9 +40,12 @@ export class ResultsComponent implements OnInit {
   addResultToCart(cartItem: Cart): void {
     this.service.cart.push(cartItem);
   }
+
+  addToFavorites (favoriteItem: Results): void {
+    this.service.favorite.push(favoriteItem);
+  }
   constructor (public service: UsaServiceService) { }
 
   ngOnInit(): void {
   }
-
 }

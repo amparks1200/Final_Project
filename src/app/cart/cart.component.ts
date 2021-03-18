@@ -2,13 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UsaServiceService } from '../usa-service.service';
 import { Router } from '@angular/router';
 
-interface Results {
-  product_name: string;
-  product_price: number;
-  product_image: any;
-  quantity: number;
-}
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -16,17 +9,13 @@ interface Results {
 })
 export class CartComponent implements OnInit {
 
-  getCartResults(cart): void {
-    this.service.cartPage(cart);
-    this.router.navigate(["/Cart"]);
-  }
   removeFromCart(index) {
     this.service.cart.splice(index, 1);
   }
+  
   constructor(public service: UsaServiceService, public router: Router) { }
 
   ngOnInit(): void {
-    this.service.getItems();
   }
 
 }
