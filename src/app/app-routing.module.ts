@@ -7,6 +7,7 @@ import { ResultsComponent } from './results/results.component'
 import { CartComponent } from './cart/cart.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { DescriptionComponent } from './description/description.component';
 
 const routes: Routes = [
   { path: 'Cart', component: CartComponent},
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'Favorites', component: FavoritesComponent},
   { path: 'Results', component: ResultsComponent},
   { path: 'AdvancedSearch', component: AdvancedSearchComponent},
+  { path: 'description', component: DescriptionComponent },
   { path: '', component: HomePageComponent }
+  
 ];
 
 @NgModule({

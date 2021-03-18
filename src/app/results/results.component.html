@@ -5,6 +5,7 @@
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
         <h3>Price: ${{ item.price }}</h3>
+        <h3>{{item.product_description}}</h3>
         <select name="quantity" [(ngModel)]="item.quantity">
             <option [value]="1">1</option>
             <option [value]="2">2</option>
@@ -14,5 +15,6 @@
         </select>
         <button class="addToCart" (click)="addResultToCart(item)">Add to Cart!</button>
         <button class="favoriteBtn" (click)="addToFavorites(item)">Add to Favorites</button>
+        <button (click)="seeDetails(item)" routerLink="/description">Give me more info!</button>
     </div>
 </section>
