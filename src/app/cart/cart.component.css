@@ -4,3 +4,8 @@
     justify-content: flex-start;
     padding: 10px;
 }
+.orderTotals {
+    display: block;
+    float: right;
+    padding-right: 10px;
+}

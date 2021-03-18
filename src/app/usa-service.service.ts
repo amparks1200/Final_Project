@@ -10,7 +10,6 @@ interface Results {
   price?: number;
 } 
 
-
 @Injectable({
   providedIn: 'root'
 })

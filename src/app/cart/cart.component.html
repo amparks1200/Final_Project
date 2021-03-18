@@ -10,7 +10,7 @@
         <button class="delete" (click)="removeFromCart(myIndex)">Remove</button>
     </div>
 </section>
-<section>
+<section class="orderTotals">
     <p> Subtotal: ${{ service.getSubTotal() }}</p>
     <p> Tax: ${{ service.getTaxes() }}</p>
     <p> Order Total: ${{ service.getGrandTotal() }}</p>
