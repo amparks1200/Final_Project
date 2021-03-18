@@ -6,6 +6,8 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
+  quantity?: number; 
+  price?: number;
 } 
 
 
@@ -70,5 +72,25 @@ export class UsaServiceService {
           this.items = response;
         });
     }
+
+    getSubTotal(){
+      let total = 0;
+      for (let item of this.cart) {
+        total += (item.price * item.quantity);
+      }
+      return total;
+    }
+
+    getTaxes() {
+      let taxes = (this.getSubTotal() * .06).toFixed(2);
+      return taxes;
+    }
+
+    getGrandTotal() {
+      let grandTotal = (this.getSubTotal() *1.06).toFixed(2);
+      return grandTotal;
+    }
   }
+
+
 
