@@ -4,3 +4,11 @@
     justify-content: flex-start;
     padding: 10px;
 }
+.itemResult {
+    position: relative;
+}
+.favoriteBtn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}

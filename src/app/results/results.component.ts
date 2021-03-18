@@ -6,10 +6,10 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
-  business_name: any;
-  business_description: any;
-  state: string;
-  city: string;
+  business_name?: any;
+  business_description?: any;
+  state?: string;
+  city?: string;
 
 } 
 interface Cart extends Results {
