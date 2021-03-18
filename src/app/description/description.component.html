@@ -1,11 +1,12 @@
 <h1>Description page</h1>
 <section class="detailsInfo">
-    <!-- <div *ngIf="itemDetails"> -->
-        <!-- <img src='{{ item.images }}' class='itemImage'>
+    <div>
+        <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
         <h3>{{item.business_description}}</h3>
-        <h3>Price: ${{ item.price }}</h3> -->
-    <!-- </div> -->
+        <h3>Price: ${{ item.price }}</h3> 
+        <h3>{{item.product_description}}</h3>
+    </div>
 </section>
 <button routerLink="/Results">Back to my search</button>
 

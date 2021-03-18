@@ -15,12 +15,12 @@ interface Results {
 })
 export class DescriptionComponent implements OnInit {
 
-
+public item: any;
   constructor(public service: UsaServiceService, public router:Router) { }
 
   ngOnInit(): void {
     this.service.getItems()
-    
+    this.item=this.service.selectedProduct
   }
 
 }
