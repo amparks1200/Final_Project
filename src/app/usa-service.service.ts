@@ -23,6 +23,7 @@ export class UsaServiceService {
   results: any[] = [];
   public cart: Results[] = [];
   favorite: any[] = [];
+  size: string = "";
 
   constructor(private http: HttpClient) { }
 
@@ -42,8 +43,17 @@ export class UsaServiceService {
     )
   }
 
-  filterItems(itemSearch){
-      this.http.get(this.url + itemSearch).subscribe( 
+  filterItems(itemSearch, size?, state?){
+      this.items = [];
+      let url = this.url + itemSearch;
+      if (size && state){
+        url += `?size=${size}&state=${state}`;
+      } else if (state){
+        url += `?state=${state}`;
+      } else if (size){
+        url += `?size=${size}`;
+      }
+      this.http.get(url).subscribe( 
         (response: any) => {
           console.log(response);
         this.items = response.map( (item) => {

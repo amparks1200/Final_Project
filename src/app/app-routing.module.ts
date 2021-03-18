@@ -6,6 +6,7 @@ import { AboutUsComponent } from './about-us/about-us.component'
 import { ResultsComponent } from './results/results.component'
 import { CartComponent } from './cart/cart.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 const routes: Routes = [
   { path: 'Cart', component: CartComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'About-Us', component: AboutUsComponent},
   { path: 'Favorites', component: FavoritesComponent},
   { path: 'Results', component: ResultsComponent},
+  { path: 'AdvancedSearch', component: AdvancedSearchComponent},
   { path: '', component: HomePageComponent }
 ];
 

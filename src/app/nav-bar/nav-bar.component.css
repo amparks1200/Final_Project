@@ -1,23 +1,38 @@
 #links {
     display: none;
+    z-index: 10;
+    background-color: whitesmoke;
 }
 
 #links.open {
     display:block;
 }
 
+#nav{
+    z-index: 3;
+}
+
 h1 {
     font-family: 'Rye', cursive;
-    padding-left: 10px;
+    font-size: 23px;
+    padding-left: 5px;
+    opacity: 1;
+    z-index: 3;
+    position: relative;
+    transform: translateY(50%);
+    left: 0;
+    top: 50%;
+    margin: 0;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:flex-start;
     background-color: whitesmoke;
     padding: 0px 10px 0 0;
     margin-bottom: 10px;
+    height: 100px;
     
 }
 
@@ -25,6 +40,21 @@ a {
     text-decoration: none;
     text-align: center;
     display:flex;
-    font-size: 24px;
+    font-size: 18px;
     color:black;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.transbox{
+    background-color: whitesmoke;
+    position:absolute;
+    top: 0;
+    width: 290px;
+    height: 100px;
+    opacity: .5;
+    background-image: url('/assets/flagBanner.png');
+    background-size:290px 115px;
+    background-repeat: no-repeat;
 }
