@@ -29,7 +29,6 @@ nav {
     background-color: whitesmoke;
     padding: 0px 10px 0 0;
     margin-bottom: 10px;
-<<<<<<< HEAD
     
 }
 
@@ -39,7 +38,6 @@ a {
     display:flex;
     font-size: 24px;
     color:black;
-=======
     /* background-image: url('/assets/flagBanner.png');
     background-size:310px 115px;
     background-repeat: no-repeat; */
@@ -61,5 +59,4 @@ a {
     background-image: url('/assets/flagBanner.png');
     background-size:310px 115px;
     background-repeat: no-repeat;
->>>>>>> sh-advanced-search
 }

@@ -20,11 +20,8 @@ export class UsaServiceService {
   items: any[] = [];
   results: any[] = [];
   public cart: Results[] = [];
-<<<<<<< HEAD
   favorite: any[] = [];
-=======
   size: string = "";
->>>>>>> sh-advanced-search
 
   constructor(private http: HttpClient) { }
 
