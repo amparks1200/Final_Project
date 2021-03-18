@@ -6,6 +6,11 @@ interface Results {
   product_name: string;
   product_price: number;
   product_image: any;
+  business_name: any;
+  business_description: any;
+  state: string;
+  city: string;
+
 } 
 interface Cart extends Results {
   quantity: number;
@@ -24,6 +29,11 @@ export class ResultsComponent implements OnInit {
       product_price: result.product_price,
       product_image: result.product_image
     });
+  }
+
+  seeDetails (itemDetails: Results): void {
+    console.log (itemDetails)
+    this.service.selectedProduct=(itemDetails);
   }
 
   addResultToCart(cartItem: Cart): void {

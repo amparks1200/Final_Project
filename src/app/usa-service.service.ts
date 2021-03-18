@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Subscriber } from 'rxjs';
 
 interface Results {
   product_name: string;
@@ -15,7 +14,8 @@ interface Results {
 export class UsaServiceService {
   showCart: boolean = true;
   public url: string = "http://localhost:3000/";
-
+  description: any[] =[];
+  selectedProduct: Results;
   categories: any[] = [];
   items: any[] = [];
   results: any[] = [];
@@ -61,7 +61,17 @@ export class UsaServiceService {
         (response: any) => {
           console.log(response);
         this.items = response;
-      });
+      }); }
+
+      moreDetails (itemDetails){
+        this.http.get(this.url + "description/" + itemDetails).subscribe(
+          (response: any) => {
+            console.log(response);
+            this.items = response.results;
+          })
+      }
     }
-  }
+  
+    
+        
 
