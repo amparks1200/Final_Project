@@ -1,5 +1,7 @@
 <h2>Search Results</h2>
 <a routerLink="/Home">New Search</a>
+
+<div class='resultsPage'>
 <section class="allResults">
     <div *ngFor="let item of service.items" class='itemResult'>
         <img src='{{ item.images }}' class='itemImage'>
@@ -18,3 +20,4 @@
         <button (click)="seeDetails(item)" routerLink="/description">Give me more info!</button>
     </div>
 </section>
+</div>
