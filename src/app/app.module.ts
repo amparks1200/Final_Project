@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { DescriptionComponent } from './description/description.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DescriptionComponent } from './description/description.component';
     CartComponent,
     FavoritesComponent,
     CheckoutComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ReceiptComponent
   ],
   imports: [
     BrowserModule,

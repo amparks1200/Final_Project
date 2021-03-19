@@ -1,0 +1,15 @@
+    <h1 class="receiptCenterAlign">Thank you for supporting American made products by ordering with Star Spangled Products!</h1>
+    <h2 class="receiptCenterAlign">Enjoy your order in 5-8 business days.</h2>
+    <p class="receiptCenterAlign"> Subtotal: ${{ service.getSubTotal() }}</p>
+    <p class="receiptCenterAlign"> Tax: ${{ service.getTaxes() }}</p>
+    <p class="receiptCenterAlign"> Order Total: ${{ service.getGrandTotal() }}</p>
+    <section class="cartItems">
+        <div *ngFor="let item of service.cart; let myIndex = index" class='itemResult'>
+            <img src='{{ item.images }}' class='itemImage'>
+            <h3>{{ item.product_name }}</h3>
+            <h3>Price: ${{ item.price }}</h3>
+            <h3>Quantity: {{ item.quantity }}</h3>
+            <h3>Item Total: ${{ item.price * item.quantity }} </h3>
+            <button class="delete" (click)="removeFromCart(myIndex)">Remove</button>
+        </div>
+    </section>

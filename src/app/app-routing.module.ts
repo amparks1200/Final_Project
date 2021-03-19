@@ -8,6 +8,8 @@ import { CartComponent } from './cart/cart.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { DescriptionComponent } from './description/description.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 const routes: Routes = [
   { path: 'Cart', component: CartComponent},
@@ -18,8 +20,9 @@ const routes: Routes = [
   { path: 'Results', component: ResultsComponent},
   { path: 'AdvancedSearch', component: AdvancedSearchComponent},
   { path: 'description', component: DescriptionComponent },
+  { path: 'Checkout', component: CheckoutComponent},
+  { path: 'Receipt', component: ReceiptComponent},
   { path: '', component: HomePageComponent }
-  
 ];
 
 @NgModule({
