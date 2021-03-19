@@ -24,7 +24,6 @@ h1 {
     top: 50%;
     margin: 0;
 }
-
 nav {
     display: flex;
     justify-content:space-between;
@@ -35,7 +34,6 @@ nav {
     height: 100px;
     
 }
-
 a {
     text-decoration: none;
     text-align: center;
@@ -58,3 +56,34 @@ a {
     background-size:290px 115px;
     background-repeat: no-repeat;
 }
+
+@media screen and (min-width: 1025px) {
+    #nav {
+        display:none;
+        
+    }
+    a {
+        text-decoration: none;
+        color:black;
+        margin: 0px 5px;
+        font-size: 24px;
+    }
+    #links {
+        display:flex;
+        flex-direction: row;
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: flex-end;
+    }
+    .transbox{
+        background-color: whitesmoke;
+        position:absolute;
+        top: 0;
+        width: 290px;
+        height: 100px;
+        opacity: .5;
+        background-image: url('/assets/flagBanner.png');
+        background-size:290px 115px;
+        background-repeat: no-repeat;
+    }
+  }
