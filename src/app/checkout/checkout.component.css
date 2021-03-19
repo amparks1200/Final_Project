@@ -4,3 +4,6 @@
 #expiration-inputs {
     color: lightslategray;
 }
+.shippingAddress {
+    display: block;
+}
