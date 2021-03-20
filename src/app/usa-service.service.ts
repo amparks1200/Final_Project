@@ -28,7 +28,7 @@ export class UsaServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getItems(){
+  public getItems(){
     this.http.get("https://usa-products.herokuapp.com/api").subscribe(
       (response: any) => {
         console.log(response);
@@ -44,7 +44,7 @@ export class UsaServiceService {
     )
   }
 
-  filterItems(itemSearch, size?, state?){
+  public filterItems(itemSearch, size?, state?){
       this.items = [];
       let url = API_URL + itemSearch;
       if (size && state){
@@ -65,7 +65,7 @@ export class UsaServiceService {
       });
     }
 
-    selectCategory(catSelected){
+    public selectCategory(catSelected){
       this.http.get(API_URL + "category/" + catSelected).subscribe( 
         (response: any) => {
           console.log(response);
@@ -76,7 +76,7 @@ export class UsaServiceService {
       });
     }
 
-    favoritesPage(favoriteItem){
+    public favoritesPage(favoriteItem){
       this.http.get(API_URL + "favorites/" + favoriteItem).subscribe(
         (response:any) => {
           console.log(response);
@@ -84,7 +84,7 @@ export class UsaServiceService {
         });
     }
 
-    getSubTotal(){
+    public getSubTotal(){
       let total = 0;
       for (let item of this.cart) {
         total += (item.price * item.quantity);
@@ -92,17 +92,17 @@ export class UsaServiceService {
       return total;
     }
 
-    getTaxes() {
+    public getTaxes() {
       let taxes = (this.getSubTotal() * .06).toFixed(2);
       return taxes;
     }
 
-    getGrandTotal() {
+   public getGrandTotal() {
       let grandTotal = (this.getSubTotal() *1.06).toFixed(2);
       return grandTotal;
        }
 
-      moreDetails (itemDetails){
+      public moreDetails (itemDetails){
         this.http.get(API_URL + "description/" + itemDetails).subscribe(
           (response: any) => {
             console.log(response);
