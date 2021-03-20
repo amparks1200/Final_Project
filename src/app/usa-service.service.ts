@@ -46,7 +46,7 @@ export class UsaServiceService {
 
   filterItems(itemSearch, size?, state?){
       this.items = [];
-      let url = this.url + itemSearch;
+      let url = API_URL + itemSearch;
       if (size && state){
         url += `?size=${size}&state=${state}`;
       } else if (state){
@@ -54,7 +54,7 @@ export class UsaServiceService {
       } else if (size){
         url += `?size=${size}`;
       }
-      this.http.get(url).subscribe( 
+      this.http.get(API_URL).subscribe( 
         (response: any) => {
           console.log(response);
         this.items = response.map( (item) => {
@@ -66,7 +66,7 @@ export class UsaServiceService {
     }
 
     selectCategory(catSelected){
-      this.http.get(this.url + "category/" + catSelected).subscribe( 
+      this.http.get(API_URL + "category/" + catSelected).subscribe( 
         (response: any) => {
           console.log(response);
         this.items = response.map( (item) => {
@@ -77,7 +77,7 @@ export class UsaServiceService {
     }
 
     favoritesPage(favoriteItem){
-      this.http.get(this.url + "favorites/" + favoriteItem).subscribe(
+      this.http.get(API_URL + "favorites/" + favoriteItem).subscribe(
         (response:any) => {
           console.log(response);
           this.items = response;
@@ -103,7 +103,7 @@ export class UsaServiceService {
        }
 
       moreDetails (itemDetails){
-        this.http.get(this.url + "description/" + itemDetails).subscribe(
+        this.http.get(API_URL + "description/" + itemDetails).subscribe(
           (response: any) => {
             console.log(response);
             this.items = response.results;
