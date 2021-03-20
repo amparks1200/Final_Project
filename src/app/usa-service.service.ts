@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { environment } from '..environments/environment';
 
 interface Results {
   product_name: string;
@@ -8,7 +9,7 @@ interface Results {
   quantity?: number; 
   price?: number;
 } 
-
+const API_URL = environment.apiUrl;
 @Injectable({
   providedIn: 'root'
 })
@@ -28,7 +29,7 @@ export class UsaServiceService {
   constructor(private http: HttpClient) { }
 
   getItems(){
-    this.http.get("http://localhost:3000").subscribe(
+    this.http.get("https://usa-products.herokuapp.com/api").subscribe(
       (response: any) => {
         console.log(response);
         for (let items of response){
