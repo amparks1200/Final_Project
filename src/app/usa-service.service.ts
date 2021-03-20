@@ -9,7 +9,7 @@ interface Results {
   quantity?: number; 
   price?: number;
 } 
-const API_URL = environment.apiUrl;
+const API_URL: string = environment.apiUrl;
 @Injectable({
   providedIn: 'root'
 })
