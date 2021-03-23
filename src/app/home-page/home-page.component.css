@@ -51,14 +51,19 @@ h2 {
     text-align:center;
 }
 @media screen and (max-width: 480px) {
-    .homeImg {
+    /* .homeImg {
         display:flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column; */
+    .homeImg {
+    display: none;
     }
-    img {
+    /* img {
         width: 200px;
-        height: 200px;
+        height: 200px; */
+    img {
+    display:none;
+    
     }
     h1 {
         font-size: 16px;
