@@ -1,13 +1,18 @@
-<h1>Description page</h1>
+<h1 class=header>A little more background....</h1>
+<button routerLink="/Results">Back to my search</button>
 <section class="detailsInfo">
-    <div>
+    <div class="description">
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
-        <h3>{{item.business_description}}</h3>
+        <h2>Product Description</h2>
+        <h3 class=stackwords>{{item.product_description}}</h3>
         <h3>Price: ${{ item.price }}</h3> 
-        <h3>{{item.product_description}}</h3>
+        <h2> A little background on the company</h2>
+        <h3>{{item.business_description}}</h3>
+        <h2>Big or small company?</h2>
+        <h3>{{ item.business_size}}</h3>
     </div>
 </section>
-<button routerLink="/Results">Back to my search</button>
+
 
      
