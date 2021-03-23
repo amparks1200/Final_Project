@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { environment } from '../environments/environment';
 
 interface Results {
   product_name: string;
@@ -9,14 +8,14 @@ interface Results {
   quantity?: number; 
   price?: number;
 } 
-const API_URL: string = environment.apiUrl;
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsaServiceService {
 
   showCart: boolean = true;
-  public url: string = "http://localhost:3000/";
+  public url: string = "/api";;
   description: any[] =[];
   selectedProduct: Results;
   categories: any[] = [];
@@ -28,8 +27,8 @@ export class UsaServiceService {
 
   constructor(private http: HttpClient) { }
 
-  public getItems(){
-    this.http.get("https://usa-products.herokuapp.com/api").subscribe(
+  getItems(){
+    this.http.get("/api").subscribe(
       (response: any) => {
         console.log(response);
         for (let items of response){
@@ -44,9 +43,9 @@ export class UsaServiceService {
     )
   }
 
-  public filterItems(itemSearch, size?, state?){
+  filterItems(itemSearch, size?, state?){
       this.items = [];
-      let url = API_URL + itemSearch;
+      let url = this.url + itemSearch;
       if (size && state){
         url += `?size=${size}&state=${state}`;
       } else if (state){
@@ -54,7 +53,7 @@ export class UsaServiceService {
       } else if (size){
         url += `?size=${size}`;
       }
-      this.http.get(API_URL).subscribe( 
+      this.http.get(url).subscribe( 
         (response: any) => {
           console.log(response);
         this.items = response.map( (item) => {
@@ -65,8 +64,8 @@ export class UsaServiceService {
       });
     }
 
-    public selectCategory(catSelected){
-      this.http.get(API_URL + "category/" + catSelected).subscribe( 
+    selectCategory(catSelected){
+      this.http.get(this.url + "category/" + catSelected).subscribe( 
         (response: any) => {
           console.log(response);
         this.items = response.map( (item) => {
@@ -76,15 +75,15 @@ export class UsaServiceService {
       });
     }
 
-    public favoritesPage(favoriteItem){
-      this.http.get(API_URL + "favorites/" + favoriteItem).subscribe(
+    favoritesPage(favoriteItem){
+      this.http.get(this.url + "favorites/" + favoriteItem).subscribe(
         (response:any) => {
           console.log(response);
           this.items = response;
         });
     }
 
-    public getSubTotal(){
+    getSubTotal(){
       let total = 0;
       for (let item of this.cart) {
         total += (item.price * item.quantity);
@@ -92,18 +91,18 @@ export class UsaServiceService {
       return total;
     }
 
-    public getTaxes() {
+    getTaxes() {
       let taxes = (this.getSubTotal() * .06).toFixed(2);
       return taxes;
     }
 
-   public getGrandTotal() {
+    getGrandTotal() {
       let grandTotal = (this.getSubTotal() *1.06).toFixed(2);
       return grandTotal;
        }
 
-      public moreDetails (itemDetails){
-        this.http.get(API_URL + "description/" + itemDetails).subscribe(
+      moreDetails (itemDetails){
+        this.http.get(this.url + "description/" + itemDetails).subscribe(
           (response: any) => {
             console.log(response);
             this.items = response.results;
