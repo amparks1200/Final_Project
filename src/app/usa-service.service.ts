@@ -15,7 +15,7 @@ interface Results {
 export class UsaServiceService {
 
   showCart: boolean = true;
-  public url: string = "http://localhost:3000/";
+  public url: string = "http://localhost:3000/";;
   description: any[] =[];
   selectedProduct: Results;
   categories: any[] = [];
