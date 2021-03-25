@@ -1,6 +1,7 @@
 <h1 class="h1Header">Cart</h1>
 <a class="newSearch" routerLink="/Home">Keep Shopping</a>
-<section class="cartItems">
+<div class='resultsPage'>
+<section class="allResults">
     <div *ngFor="let item of service.cart; let myIndex = index" class='itemResult'>
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
@@ -10,6 +11,7 @@
         <button class="delete" (click)="removeFromCart(myIndex)">Remove</button>
     </div>
 </section>
+</div>
 <section class="orderTotals">
     <p> Subtotal: ${{ service.getSubTotal() }}</p>
     <p> Tax: ${{ service.getTaxes() }}</p>

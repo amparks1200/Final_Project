@@ -1,7 +1,7 @@
 <h1 class="h1Header">My Favorites</h1>
 <a routerLink="/Home">Keep Shopping</a>
 <div class='resultsPage'>
-<section class="favoriteItems">
+<section class="allResults">
     <div *ngFor="let item of service.favorite; let myIndex = index" class='itemResult'>
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>

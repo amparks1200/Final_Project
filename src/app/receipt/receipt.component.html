@@ -3,7 +3,8 @@
     <p class="receiptCenterAlign"> Subtotal: ${{ service.getSubTotal() }}</p>
     <p class="receiptCenterAlign"> Tax: ${{ service.getTaxes() }}</p>
     <p class="receiptCenterAlign"> Order Total: ${{ service.getGrandTotal() }}</p>
-    <section class="cartItems">
+    <div class='resultsPage'>
+    <section class="allResults">
         <div *ngFor="let item of service.cart; let myIndex = index" class='itemResult'>
             <img src='{{ item.images }}' class='itemImage'>
             <h3>{{ item.product_name }}</h3>
@@ -12,3 +13,4 @@
             <h3>Item Total: ${{ item.price * item.quantity }} </h3>
         </div>
     </section>
+</div>
