@@ -7,11 +7,11 @@
             <button id="nav" (click)="showNav()" type="button">&#9776;</button>
             <div>
                 <section id="links" [ngClass]="{open: menuOpen}">
-                    <a routerLink="/Home" (click)="closeNav()">Home</a>
-                    <a routerLink="/Cart" (click)="closeNav()">Cart </a>
+                    <a class="h2Header" routerLink="/Home" (click)="closeNav()">Home</a>
+                    <a class="h2Header" routerLink="/Cart" (click)="closeNav()">Cart </a>
                     <!-- <a routerLink="/Categories" (click)="showNav()">Categories</a> -->
-                    <a routerLink="/Favorites" (click)="closeNav()">Favorites</a>
-                    <a routerLink="/About-Us" (click)="closeNav()">About Us</a>
+                    <a class="h2Header" routerLink="/Favorites" (click)="closeNav()">Favorites</a>
+                    <a class="h2Header" routerLink="/About-Us" (click)="closeNav()">About Us</a>
                 </section>
             </div>
     </section>
