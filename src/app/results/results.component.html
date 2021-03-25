@@ -1,13 +1,13 @@
 <h1 class="h1Header">Search Results</h1>
-<a class="newSearch" routerLink="/Home">New Search</a>
-
+<div class="keepShopping">
+<a class="keepShopping" routerLink="/Home">New Search</a>
+</div>
 <div class='resultsPage'>
 <section class="allResults">
     <div *ngFor="let item of service.items" class='itemResult'>
         <img src='{{ item.images }}' class='itemImage'>
         <h3>{{ item.product_name }}</h3>
         <h3>Price: ${{ item.price }}</h3>
-        
         <select name="quantity" [(ngModel)]="item.quantity">
             <option [value]="1">1</option>
             <option [value]="2">2</option>
@@ -16,7 +16,7 @@
             <option [value]="5">5</option>
         </select>
         <button class="addToCart" (click)="addResultToCart(item)">Add to Cart!</button>
-        <button class="favoriteBtn" (click)="addToFavorites(item)">❤</button>
+        <button class="favoriteBtn" (click)="addToFavorites(item)">:heart:</button>
         <button (click)="seeDetails(item)" routerLink="/description">Give me more info!</button>
     </div>
 </section>
