@@ -12,14 +12,18 @@ p {
     /* font-size: 16px; */
     margin: auto;
     padding:10px;
+    font-family: 'Redressed', cursive;
+    width: 80%;
 }
 
-ul {
+.teamStyles {
     list-style-type: none;
     color:black;
     font-size: 20px;
     text-align:center;
     margin: auto;
+    padding-inline-start: 0px;
+    font-family: 'Redressed', cursive;
 }
 
 img {
