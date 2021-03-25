@@ -9,9 +9,11 @@
 <!-- <img class='banner' src='\assets\flagBanner.png'> -->
 <!-- Search -->
 <h2 class="h2Header">Search for American Made Products</h2>
-<input type="text" id="searchbox" placeholder="search items" [(ngModel)]="itemSearch">
-<a class="advancedSearch" routerLink="/AdvancedSearch">Advanced Search</a>
+<input type="text" id="searchbox" placeholder="ex. jeans" [(ngModel)]="itemSearch">
+<div class="searchDiv">
 <button class="searchButton" type="button" (click)="getFilteredItems()">Search</button>
+<a class="advancedSearch" routerLink="/AdvancedSearch">Advanced Search</a>
+</div>
 <!-- Category Section -->
 <section class='catSection'>
 <a *ngFor="let category of service.categories" [routerLink]="" class = 'homepageCat' (click)="getCatResults(category)" >
@@ -26,12 +28,3 @@
     
 </a>
 </section>
-
-
-
-
-
-<!-- <h3>Category 1</h3>
-<h3>Category 2</h3>
-<h3>Category 3</h3>
-<h3>Browse All</h3> -->

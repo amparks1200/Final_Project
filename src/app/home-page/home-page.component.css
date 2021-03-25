@@ -5,21 +5,27 @@
     border-radius: 5px;
     border: solid 2px;
     margin: 0 auto;
-    display: block;
+    /* display: block; */
 }
 
 .advancedSearch {
     text-decoration: none;
     color: black;
-    display: block;
+    /* display: block; */
 }
 
 .searchButton {
     background-color: white;
     border-radius: 5px;
     border: solid 2px;
-    display: block;
-    margin: 0 auto;
+    /* display: block; */
+    margin-right: 30px;
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 .banner{
