@@ -1,5 +1,7 @@
 <h1 class="h1Header">My Favorites</h1>
-<a routerLink="/Home">Keep Shopping</a>
+<div class="keepShopping">
+<a class="keepShopping" routerLink="/Home">Keep Shopping</a>
+</div>
 <div class='resultsPage'>
 <section class="favoriteItems">
     <div *ngFor="let item of service.favorite; let myIndex = index" class='itemResult'>
