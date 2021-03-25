@@ -15,4 +15,7 @@ export class NavBarComponent implements OnInit {
   showNav() {
     this.menuOpen = !this.menuOpen;
   }
+  closeNav() {
+    this.menuOpen = false;
+  }
 }

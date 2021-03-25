@@ -50,15 +50,84 @@ body {
     padding: 5px;
 }
 
-@media screen and (min-width: 1025px){
-    .allResults {
-        width: 950;
-    }
+#searchbox {
+    margin-left: 5px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 2px;
+    margin: 0 auto;
+    display: block;
+    max-width: 500px;
 }
 
+@media screen and (min-width: 1025px) {
+    #nav {
+        display:none;
+        
+    }
+    #links {
+        display:flex;
+        flex-direction: row;
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: flex-end;
+        text-decoration: none;
+        color:black;
+        margin: 0px 5px;
+        font-size: 24px;
+    }
+    .transbox{
+        background-color: whitesmoke;
+        position:absolute;
+        top: 0;
+        width: 290px;
+        height: 100px;
+        opacity: .5;
+        background-image: url('/assets/flagBanner.png');
+        background-size:290px 115px;
+        background-repeat: no-repeat;
+    }
+
+    .allResults {
+        width: 950px;
+    }
+  }
+
 @media screen and (min-width: 1325px) {
+    #nav {
+        display:none;
+        
+    }
+    #links {
+        display:flex;
+        flex-direction: row;
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: flex-end;
+        text-decoration: none;
+        color:black;
+        margin: 0px 5px;
+        font-size: 24px;
+    }
+    .transbox{
+        background-color: whitesmoke;
+        position:absolute;
+        top: 0;
+        width: 290px;
+        height: 100px;
+        opacity: .5;
+        background-image: url('/assets/flagBanner.png');
+        background-size:290px 115px;
+        background-repeat: no-repeat;
+    }
     .allResults {
         width: 1400px;
     }
 }
+
+
+
+
+
 
