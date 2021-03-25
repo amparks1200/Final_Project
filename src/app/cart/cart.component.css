@@ -13,6 +13,9 @@ h2 {
 a {
   padding-left: 10px;
 }
+.checkout {
+    margin-bottom: 50px;
+}
 @media screen and (min-width: 1025px) {
   .cartItems {
     display: flex;
