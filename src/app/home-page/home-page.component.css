@@ -5,21 +5,27 @@
     border-radius: 5px;
     border: solid 2px;
     margin: 0 auto;
-    display: block;
+    /* display: block; */
 }
 
 .advancedSearch {
     text-decoration: none;
     color: black;
-    display: block;
+    /* display: block; */
 }
 
 .searchButton {
     background-color: white;
     border-radius: 5px;
     border: solid 2px;
-    display: block;
-    margin: 0 auto;
+    /* display: block; */
+    margin-right: 30px;
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 .banner{
@@ -39,26 +45,20 @@ img {
     margin: 5px;
     border: solid whitesmoke 5px;
 }
-h1 {
-    font-size: 36px;
-    color: black;
-    text-align:center;
-}
-
-h2 {
-    font-size: 24px;
-    color: black;
-    text-align:center;
-}
 @media screen and (max-width: 480px) {
-    .homeImg {
+    /* .homeImg {
         display:flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column; */
+    .homeImg {
+    display: none;
     }
-    img {
+    /* img {
         width: 200px;
-        height: 200px;
+        height: 200px; */
+    img {
+    display:none;
+    
     }
     h1 {
         font-size: 16px;

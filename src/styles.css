@@ -89,6 +89,35 @@ body {
         background-repeat: no-repeat;
     }
 
+.h1Header {
+    text-decoration: none;
+    color: black;
+    font-family: 'Redressed', cursive;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+.h2Header {
+    text-decoration: none;
+    color: black;
+    font-family: 'Redressed', cursive;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.advancedSearch {
+    font-family: 'Redressed', cursive;
+}
+
+.newSearch {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color:black;
+    font-family: 'Redressed', cursive;
+}
+@media screen and (min-width: 1025px){
     .allResults {
         width: 950px;
     }
@@ -126,8 +155,4 @@ body {
     }
 }
 
-
-
-
-
-
+}
