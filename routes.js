@@ -3,10 +3,22 @@ const routes = express.Router();
 const pool = require("./connections");
 
 routes.get("/", function(req, res) {
-    pool.query('SELECT * FROM usaproducts;'). then( (results) => {
-    res.status(200);
-    res.json(results.rows);
-  });
+  const size = req.query.size;
+  const state = req.query.state;
+  const filters = [];
+  let query = "SELECT * FROM usaproducts WHERE 1 = 1";
+  if (size){
+    query += "AND business_size = $" + (filters.length + 1);
+    filters.push(size)
+  }
+  if (state){
+    query += "AND state = $" + (filters.length + 1);
+    filters.push(state);
+  }
+  pool.query(query, filters). then( (results) => {
+  res.status(200);
+  res.json(results.rows);
+});
 
 });
 

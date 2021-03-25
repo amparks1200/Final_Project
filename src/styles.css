@@ -50,6 +50,17 @@ body {
     padding: 5px;
 }
 
+#searchbox {
+    margin-left: 5px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 2px;
+    margin: 0 auto;
+    display: block;
+    max-width: 500px;
+}
+
 @media screen and (min-width: 1025px) {
     #nav {
         display:none;
@@ -77,8 +88,9 @@ body {
         background-size:290px 115px;
         background-repeat: no-repeat;
     }
+
     .allResults {
-        width: 950;
+        width: 950px;
     }
   }
 
@@ -113,4 +125,9 @@ body {
         width: 1400px;
     }
 }
+
+
+
+
+
 

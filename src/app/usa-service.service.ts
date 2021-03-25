@@ -56,13 +56,10 @@ export class UsaServiceService {
       this.http.get(url).subscribe( 
         (response: any) => {
           console.log(response);
-        this.items = response.map( (item) => {
-          item.quantity = 1;
-          return item;
+        this.items = response;
         })
-        console.log(this.items);
-      });
-    }
+        // console.log(this.items);
+  }
 
     selectCategory(catSelected){
       this.http.get(this.url + "category/" + catSelected).subscribe( 

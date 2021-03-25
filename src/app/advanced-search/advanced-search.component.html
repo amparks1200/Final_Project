@@ -1,11 +1,13 @@
-<input type="text" id="searchbox" placeholder="search items" [(ngModel)]="itemSearch">
-<h2>Business type</h2>
-    <input type="checkbox" id="big" name="big" checked [(ngModel)]="bigBusSearch">
+<section class="advancedSearchSection">
+<h2>Search for American Made Products</h2>
+<input type="text" id="searchbox" placeholder="ex. jeans" [(ngModel)]="itemSearch">
+<h2>Business Type</h2>
+    <input type="checkbox" id="big" name="big" [(ngModel)]="bigBusSearch">
     <label for="big">Big Business</label>
-    <input type="checkbox" id="small" name="small" checked [(ngModel)]="smallBusSearch">
+    <input type="checkbox" id="small" name="small" [(ngModel)]="smallBusSearch">
     <label for="small">Small Business</label>
 <h2>Search by State</h2>
-    <label for="state">Choose a state:</label>
+    <label for="state">Choose a State:</label>
     <select name="state" id="state" [(ngModel)]="state">
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -60,5 +62,8 @@
             <option value="WY">Wyoming</option>			
                 
 </select>
-
+<div class="applyDiv">
 <button class="ApplyButton" type="button" (click)="applyFilters()">Apply</button>
+</div>
+<img src="..\assets\USmap.png" class="adImg">
+</section>
