@@ -15,7 +15,7 @@ interface Results {
 export class UsaServiceService {
 
   showCart: boolean = true;
-  public url: string = "/api";;
+  public url: string = "http://localhost:3000/";;
   description: any[] =[];
   selectedProduct: Results;
   categories: any[] = [];
@@ -28,7 +28,7 @@ export class UsaServiceService {
   constructor(private http: HttpClient) { }
 
   getItems(){
-    this.http.get("/api").subscribe(
+    this.http.get("http://localhost:3000").subscribe(
       (response: any) => {
         console.log(response);
         for (let items of response){
