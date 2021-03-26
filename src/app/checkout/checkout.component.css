@@ -1,9 +1,26 @@
 .form-control {
-    display: block;
+     display: block;
+     text-align: center;
+     margin: 5px auto;
 }
 #expiration-inputs {
     color: lightslategray;
+    margin: 5px auto;
 }
 .shippingAddress {
     display: block;
+}
+
+.shippingAddress label{
+    display: block;
+    margin: 5px 0;
+}
+
+.checkoutSection{
+    /* margin-left: 50px; */
+    text-align: center;
+}
+
+.placeOrder{
+    margin: 10px 0;
 }
