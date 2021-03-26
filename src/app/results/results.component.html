@@ -16,7 +16,7 @@
             <option [value]="5">5</option>
         </select>
         <button class="addToCart" (click)="addResultToCart(item)">Add to Cart!</button>
-        <button class="favoriteBtn" (click)="addToFavorites(item)">❤</button>
+        <button class="favoriteBtn" [ngClass]="{'notSelected': item.toggle, 'selected' : !item.toggle}" (click)="selectFavorite(item)" (click)="addToFavorites(item)">❤</button>
         <button (click)="seeDetails(item)" routerLink="/description">Give me More Details!</button>
     </div>
 </section>

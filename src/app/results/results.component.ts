@@ -10,7 +10,6 @@ interface Results {
   business_description?: any;
   state?: string;
   city?: string;
-
 } 
 interface Cart extends Results {
   quantity: number;
@@ -40,9 +39,14 @@ export class ResultsComponent implements OnInit {
   addResultToCart(cartItem: Cart): void {
     this.service.cart.push(cartItem);
   }
-
+ 
   addToFavorites (favoriteItem: Results): void {
     this.service.favorite.push(favoriteItem);
+  }
+
+  toggle: boolean = true;
+  selectFavorite(item) {
+    item.toggle = !item.toggle;
   }
   constructor (public service: UsaServiceService) { }
 

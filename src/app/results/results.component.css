@@ -1,12 +1,17 @@
 .favoriteBtn {
-    position: absolute;
-    top: 4px;
-    right: 4px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
 }
-
 h2 {
-    padding-left: 10px;
-  }
-  a {
-    padding-left: 10px;
-  }
+  padding-left: 10px;
+}
+a {
+  padding-left: 10px;
+}
+.selected {
+  color: black;
+}
+.notSelected {
+  color: red;
+}
