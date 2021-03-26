@@ -1,35 +1,33 @@
+<section class="checkoutSection">
 <p>Order Total: ${{ service.getGrandTotal() }}</p>
 
 <h2>Shipping Address</h2>
 <section class="shippingAddress">
-  <label>First Name: </label>
-  <input type="text">  
-  <label>Last Name: </label>
-  <input type="text">
-  <br> 
-  <label>Address: </label>
-  <input type="text">  
-  <br>
-  <label>City: </label>
-  <input type="text"> 
-  <label >State: </label>
-  <input type="text">  
-  <br>
-  <label>Zip Code: </label>
-  <input type="text"> 
+  <label>First Name:
+  <input type="text">  </label>
+  <label>Last Name: 
+  <input type="text"> </label>
+  <label>Address: 
+  <input type="text">  </label>
+  <label>City:
+  <input type="text">  </label>
+  <label >State: 
+  <input type="text">  </label>
+  <label>Zip Code: 
+  <input type="text"> </label>
 </section>
 
 <h2>Payment</h2>
 <section class="cardInformation">
-  <label>First Name: </label>
-  <input type="text" class="form-control">  
-  <label>Last Name: </label>
-  <input type="text" class="form-control"> 
-  <label>Card Number: </label>
-  <input type="text" class="form-control" [(ngModel)]="ccNumber"/>
-  <label for="cvv">CVV </label>
-  <input type="text" class="form-control"/>
-  <label>Expiration Date: </label>
+  <label>First Name: 
+  <input type="text" class="form-control">  </label>
+  <label>Last Name:
+  <input type="text" class="form-control"> </label>
+  <label>Card Number: 
+  <input type="text" class="form-control" [(ngModel)]="ccNumber"/> </label>
+  <label for="cvv">CVV 
+  <input type="text" class="form-control"/> </label>
+  <label>Expiration Date: 
   <select class="form-control" id="expiration-inputs">
     <option value="" selected disabled hidden>month</option>
     <option value="1">January</option>
@@ -52,7 +50,8 @@
     <option value="23">2023</option>
     <option value="24">2024</option>
     <option value="25">2025</option>
-  </select>
+  </select> </label>
   <!-- <button class="placeOrder" routerLink="/Receipt" (click)="validateCC">Place Order</button> -->
   <button class="placeOrder" (click)="validateCC()">Place Order</button>
+</section>
 </section>
