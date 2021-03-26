@@ -60,6 +60,25 @@ body {
     display: block;
     max-width: 500px;
 }
+
+.allResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    
+}
+.itemResult {
+    position: relative;
+    flex: 1;
+    flex-grow: 0;
+}
+
+.resultsPage{
+    display: flex;
+    justify-content: center;
+}
+
 .h1Header {
     text-decoration: none;
     color: black;
